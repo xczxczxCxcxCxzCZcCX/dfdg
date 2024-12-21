@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI SEARCH</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Uninformed Search</h1>
+        <h4>(BF, DFS, UCS)</h4>
+    </header>   
+
+    <div class="container">
+        <div id="add-city" class="form-container">
+            <h3>Add City</h3>
+            <form>
+                <label>From City</label><br>
+                <input type="text" id="fromCity"><br>
+                
+                <label>To City</label><br>
+                <input type="text" id="toCity"><br>
+                
+                <label>Cost</label><br>
+                <input type="number" id="costBetweenCities"><br><br>
+                
+                <button type="button" onclick="drawGraph()">Add City</button>
+            </form>
+        </div>
+
+        <div id="graph" class="graph-container">
+            <h3>City Map Visualization</h3>
+            <canvas id="canvas" width="800" height="350"></canvas>
+        </div>
+
+        <div class="form-container">
+            <h3>BFS Search</h3>
+            <form> 
+                <label>Start City</label><br>
+                <input type="text" id="bfsStartCity"><br>
+            
+                <label>Destination City</label><br>
+                <input type="text" id="bfsDestinationCity"><br><br>
+            
+                <button type="button" onclick="BFS()">BFS</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h3>DFS Search</h3>
+            <form> 
+                <label>Start City</label><br>
+                <input type="text" id="dfsStartCity"><br>
+            
+                <label>Destination City</label><br>
+                <input type="text" id="dfsDestinationCity"><br><br>
+            
+                <button type="button" onclick="DFS()">DFS</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h3>UCS Search</h3>
+            <form> 
+                <label>Start City</label><br>
+                <input type="text" id="ucsStartCity"><br>
+                
+                <label>Destination City</label><br>
+                <input type="text" id="ucsDestinationCity"><br><br>
+                
+                <button type="button" onclick="UCS()">UCS</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
